@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useEffect, useReducer} from 'react'
 import { API } from 'aws-amplify';
-//import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 import { v4 as uuid } from 'uuid'
 import { List, Input, Button } from 'antd'
 import { listNotes } from './graphql/queries';
