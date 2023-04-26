@@ -128,6 +128,9 @@ const App = () => {
       return () => subscription.unsubscribe()
   }, []);
 
+  const totalNotes = state.notes.length;
+  const completedNotes = state.notes.filter(n => n.completed).length;
+
   const styles = {
     container: {padding: 20},
     input: {marginBottom: 10},
@@ -180,6 +183,9 @@ const App = () => {
       dataSource={state.notes}
       renderItem={renderItem}
     />
+    <h3>
+      { totalNotes } Total Notes | { completedNotes } Notes Completed
+    </h3>
   </div>
   );
 }
